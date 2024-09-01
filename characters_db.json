@@ -1,0 +1,165 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 12,
+      "name": "Alexander",
+      "image": "https://rickandmortyapi.com/api/character/avatar/12.jpeg",
+      "species": "Human",
+      "status": "Dead"
+    },
+    {
+      "id": 13,
+      "name": "Alien Googah",
+      "image": "https://rickandmortyapi.com/api/character/avatar/13.jpeg",
+      "species": "Alien",
+      "status": "Unknown"
+    },
+    {
+      "id": 14,
+      "name": "Alien Morty",
+      "image": "https://rickandmortyapi.com/api/character/avatar/14.jpeg",
+      "species": "Alien",
+      "status": "Unknown"
+    },
+    {
+      "id": 15,
+      "name": "Alien Rick",
+      "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg",
+      "species": "Alien",
+      "status": "Unknown"
+    },
+    {
+      "id": 2,
+      "name": "Morty Smith",
+      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 16,
+      "name": "Amish Cyborg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/16.jpeg",
+      "species": "Alien",
+      "status": "Dead"
+    },
+    {
+      "id": 3,
+      "name": "Summer Smith",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 17,
+      "name": "Annie",
+      "image": "https://rickandmortyapi.com/api/character/avatar/17.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 18,
+      "name": "Antenna Morty",
+      "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 4,
+      "name": "Beth Smith",
+      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 19,
+      "name": "Antenna Rick",
+      "image": "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
+      "species": "Human",
+      "status": "Unknown"
+    },
+    {
+      "id": 21,
+      "name": "Aqua Morty",
+      "image": "https://rickandmortyapi.com/api/character/avatar/21.jpeg",
+      "species": "Humanoid",
+      "status": "Unknown"
+    },
+    {
+      "id": 25,
+      "name": "Armothy",
+      "image": "https://rickandmortyapi.com/api/character/avatar/25.jpeg",
+      "species": "unknown",
+      "status": "Dead"
+    },
+    {
+      "id": 26,
+      "name": "Arthricia",
+      "image": "https://rickandmortyapi.com/api/character/avatar/26.jpeg",
+      "species": "Alien",
+      "status": "Alive"
+    },
+    {
+      "id": 27,
+      "name": "Artist Morty",
+      "image": "https://rickandmortyapi.com/api/character/avatar/27.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 28,
+      "name": "Attila Starwar",
+      "image": "https://rickandmortyapi.com/api/character/avatar/28.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 29,
+      "name": "Baby Legs",
+      "image": "https://rickandmortyapi.com/api/character/avatar/29.jpeg",
+      "species": "Human",
+      "status": "Alive"
+    },
+    {
+      "id": 30,
+      "name": "Baby Poopybutthole",
+      "image": "https://rickandmortyapi.com/api/character/avatar/30.jpeg",
+      "species": "Poopybutthole",
+      "status": "Alive"
+    },
+    {
+      "id": 31,
+      "name": "Baby Wizard",
+      "image": "https://rickandmortyapi.com/api/character/avatar/31.jpeg",
+      "species": "Alien",
+      "status": "Dead"
+    },
+    {
+      "id": 22,
+      "name": "Aqua Rick",
+      "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
+      "species": "Humanoid",
+      "status": "Unknown"
+    },
+    {
+      "id": 32,
+      "name": "Bearded Lady",
+      "image": "https://rickandmortyapi.com/api/character/avatar/32.jpeg",
+      "species": "Alien",
+      "status": "Dead"
+    },
+    {
+      "id": 33,
+      "name": "Beebo",
+      "image": "https://rickandmortyapi.com/api/character/avatar/33.jpeg",
+      "species": "Alien",
+      "status": "Dead"
+    }
+  ]
+}

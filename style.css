@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: rgb(91, 158, 14);
+}
+#search-wrapper,
+.radio-wrapper,
+#paggination-wrapper,
+#add-form-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+#search-wrapper,
+#add-form-wrapper {
+  flex-flow: column;
+  gap: 10px;
+  margin: 30px 0 30px;
+  height: auto;
+  width: min(300px, 2vw);
+}
+#search-wrapper label {
+  font-size: 1.2rem;
+}
+.radio-wrapper {
+  gap: 0.5rem;
+}
+.radio-wrapper label {
+  font-weight: bold;
+  margin-left: 15px;
+}
+#paggination-wrapper {
+  margin: 30px 0 20px;
+  gap: 5px;
+  font-size: 1.5rem;
+  cursor: default;
+}
+.inputs,
+#item-amount {
+  height: 30px;
+  border-radius: 8px;
+}
+input[type="text"] {
+  padding: 0 0 0 5px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  min-width: 200px;
+}
+input[type="button"] {
+  width: auto;
+  cursor: pointer;
+  padding: 0 10px;
+}
+input[type="button"]:active {
+  scale: 0.95s;
+}
+#character-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+  width: min(90%, 1920px);
+  justify-content: center;
+}
+.card,
+#add-form-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 150px;
+  height: 230px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-align: center;
+  padding: 5px;
+  transition: transform 0.3s;
+}
+
+#add-form-wrapper {
+  padding: 10px;
+  transition: none;
+  width: auto;
+  height: auto;
+  margin: 15px 0;
+}
+#add-form-wrapper input {
+  width: 100%;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card h4 {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.char-info {
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  flex-flow: column;
+  font-size: 0.85rem;
+  color: rgb(85, 85, 85);
+  align-items: flex-start;
+}
+.card input {
+  width: 90%;
+}
