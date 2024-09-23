@@ -54,12 +54,12 @@ input[type="text"] {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   min-width: 200px;
 }
-input[type="button"] {
+button[type="button"] {
   width: auto;
   cursor: pointer;
   padding: 0 10px;
 }
-input[type="button"]:active {
+button[type="button"]:active {
   scale: 0.95s;
 }
 #character-wrapper {
@@ -94,7 +94,8 @@ input[type="button"]:active {
   height: auto;
   margin: 15px 0;
 }
-#add-form-wrapper input {
+#add-form-wrapper input,
+#add-form-wrapper button {
   width: 100%;
 }
 .card:hover {

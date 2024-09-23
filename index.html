@@ -6,97 +6,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <br />
-    <!-- <input type="button" value="Zapisz dane" onclick="downloadData()" /> -->
     <div id="search-wrapper">
-      <input
-        type="text"
-        id="input-name"
-        class="inputs"
-        placeholder="Search by name"
-        oninput="loadCharacters()"
-      />
+      <input type="text" id="input-name" class="inputs" placeholder="Search by name" />
       <div class="radio-wrapper">
-        <label for="alive">Alive</label>
-        <input
-          type="radio"
-          name="status"
-          id="radio-alive"
-          value="alive"
-          checked
-          onchange="loadCharacters()"
-        />
-        <label for="dead">Dead</label
-        ><input
-          type="radio"
-          name="status"
-          id="radio-dead"
-          value="dead"
-          onchange="loadCharacters()"
-        />
-        <label for="unknown">Unknown</label
-        ><input
-          type="radio"
-          name="status"
-          id="radio-unknown"
-          value="unknown"
-          onchange="loadCharacters()"
-        />
+        <label for="radio-alive">Alive</label>
+        <input type="radio" name="status" id="radio-alive" value="alive" checked />
+        <label for="radio-dead">Dead</label
+        ><input type="radio" name="status" id="radio-dead" value="dead" />
+        <label for="radio-unknown">Unknown</label
+        ><input type="radio" name="status" id="radio-unknown" value="unknown" />
       </div>
     </div>
     <div id="character-wrapper"></div>
     <div id="paggination-wrapper">
-      <input
-        id="prev-btn"
-        type="button"
-        class="inputs"
-        value="<<"
-        onclick="firstPage()"
-      />
-      <input
-        id="prev-btn"
-        type="button"
-        class="inputs"
-        value="<"
-        onclick="prevPage()"
-      />
-      <span id="acc-page">1 from 1</span>
-      <input
-        id="next-btn"
-        type="button"
-        class="inputs"
-        value=">"
-        onclick="nextPage()"
-      />
-      <input
-        id="next-btn"
-        type="button"
-        class="inputs"
-        value=">>"
-        onclick="lastsPage()"
-      />
+      <div id="paggination-wrapper">
+        <button id="first-page-btn" type="button" class="inputs"><<</button>
+        <button id="prev-page-btn" type="button" class="inputs"><</button>
+        <span id="acc-page">1</span>
+        <button id="next-page-btn" type="button" class="inputs">></button>
+        <button id="last-page-btn" type="button" class="inputs">>></button>
+      </div>
       <label for="pages">Items:</label>
-      <select name="pages" id="item-amount" onchange="loadCharacters()">
+      <select name="pages" id="item-amount">
         <option value="1" selected>1</option>
         <option value="5" selected>5</option>
         <option value="10">10</option>
       </select>
     </div>
     <div id="add-form-wrapper">
-      <input
-        type="text"
-        id="add-name"
-        class="inputs"
-        placeholder="Name"
-        required
-      />
-      <input
-        type="text"
-        id="add-species"
-        class="inputs"
-        placeholder="Species"
-        required
-      />
+      <input type="text" id="add-name" class="inputs" placeholder="Name" required />
+      <input type="text" id="add-species" class="inputs" placeholder="Species" required />
       <input
         type="text"
         id="add-image"
@@ -104,31 +43,14 @@
         placeholder="https://Image_url (not required)"
       />
       <div class="radio-wrapper">
-        <label for="alive">Alive</label>
-        <input
-          type="radio"
-          name="add-status"
-          id="add-alive"
-          value="alive"
-          checked
-        />
-        <label for="dead">Dead</label
+        <label for="add-alive">Alive</label>
+        <input type="radio" name="add-status" id="add-alive" value="alive" checked />
+        <label for="add-dead">Dead</label
         ><input type="radio" name="add-status" id="add-dead" value="dead" />
-        <label for="unknown">Unknown</label
-        ><input
-          type="radio"
-          name="add-status"
-          id="add-unknown"
-          value="unknown"
-        />
+        <label for="add-unknown">Unknown</label
+        ><input type="radio" name="add-status" id="add-unknown" value="unknown" />
       </div>
-      <input
-        type="button"
-        id="add-character"
-        class="inputs"
-        value="Add new character"
-        onclick="addCharacter()"
-      />
+      <button type="butotn" id="add-character" class="inputs">Add new character</button>
     </div>
     <script src="script.js"></script>
   </body>

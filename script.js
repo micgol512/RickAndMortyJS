@@ -2,37 +2,6 @@ const BASE_URL = `http://localhost:3000/characters/`;
 let lastPage = "";
 let accPage = 1;
 
-// pobranie z zewnetrzengo API danych
-//BASE_URL = `https://rickandmortyapi.com/api/character`;
-//LOCAL_URL =`http://localhost:3000/characters`
-// async function patchToJS(object) {
-//   const reqJS = await fetch(`${LOCAL_URL}`, {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(object),
-//   });
-// }
-// async function downloadData() {
-//   try {
-//     const reqApi = await fetch(`${BASE_URL}?page=2`);
-//     const characterApi = await reqApi.json();
-//     console.log(characterApi);
-//     characterApi.results.forEach(({ id, name, image, species, status }) => {
-//       const body = {
-//         id,
-//         name,
-//         image,
-//         species,
-//         status: status === "unknown" ? "Unknown" : status,
-//       };
-//       patchToJS(body);
-//       console.log(body);
-//     });
-//   } catch (err) {
-//     console.error("ERROR:", err);
-//   }
-// }
-
 async function loadCharacters() {
   const inputName = document.getElementById("input-name");
   const itemAmount = document.getElementById("item-amount");
@@ -69,20 +38,27 @@ async function loadCharacters() {
       charsWrapper.innerHTML = "No items to display";
       accPage = 1;
       lastPage = 1;
-      loadCharacters();
       return;
     }
     charsWrapper.innerHTML = "";
     characters.forEach(({ id, name, status, species, image }) => {
       const card = document.createElement("div");
+      const img = document.createElement("img");
+      const nameHeader = document.createElement("h4");
+      const charInfo = document.createElement("div");
+      const charStatus = document.createElement("span");
+      const charSpecies = document.createElement("span");
+
       card.className = "card";
-      card.innerHTML += `
-        <img src="${image}" alt="${name}"/>
-        <h4>${name}</h4>
-        <div class="char-info">
-        <span>Status: ${status}</span>
-        <span>Species: ${species}</span></div>`;
-      card.append(createDelBtn(id));
+      img.src = image;
+      img.alt = name;
+      nameHeader.innerHTML = name;
+      charInfo.className = "char-info";
+      charStatus.innerHTML = `Status: ${status}`;
+      charSpecies.innerHTML = `Species: ${species}`;
+
+      charInfo.append(charStatus, charSpecies);
+      card.append(img, nameHeader, charInfo, createDelBtn(id));
       charsWrapper.append(card);
     });
   } catch (err) {
@@ -124,9 +100,9 @@ async function deleteCharacter(id) {
   loadCharacters();
 }
 function createDelBtn(id) {
-  const btn = document.createElement("input");
+  const btn = document.createElement("button");
   btn.type = "button";
-  btn.value = "Delete";
+  btn.innerHTML = "Delete";
   btn.addEventListener("click", function () {
     const userResponse = confirm("Are you sure?");
     if (userResponse) {
@@ -136,12 +112,6 @@ function createDelBtn(id) {
       alert("Operation canceled.");
     }
   });
-  window;
-  // const btn = document.createElement("button");
-  // btn.innerText = `Delete`;
-  // btn.addEventListener("click", function () {
-  //   deleteCharacter(id);
-  // });
   return btn;
 }
 function nextPage() {
@@ -173,4 +143,19 @@ function lastsPage() {
   loadCharacters();
 }
 
-document.addEventListener("DOMContentLoaded", loadCharacters);
+document.addEventListener("DOMContentLoaded", () => {
+  loadCharacters();
+  document.getElementById("input-name").addEventListener("input", () => {
+    accPage = 1;
+    loadCharacters();
+  });
+  document.getElementById("radio-alive").addEventListener("change", loadCharacters);
+  document.getElementById("radio-dead").addEventListener("change", loadCharacters);
+  document.getElementById("radio-unknown").addEventListener("change", loadCharacters);
+  document.getElementById("first-page-btn").addEventListener("click", firstPage);
+  document.getElementById("prev-page-btn").addEventListener("click", prevPage);
+  document.getElementById("next-page-btn").addEventListener("click", nextPage);
+  document.getElementById("last-page-btn").addEventListener("click", lastsPage);
+  document.getElementById("item-amount").addEventListener("click", loadCharacters);
+  document.getElementById("add-character").addEventListener("click", addCharacter);
+});
