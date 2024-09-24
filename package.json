@@ -1,0 +1,12 @@
+{
+  "name": "rick-and-morty",
+  "version": "1.0.0",
+  "description": "Simple web app",
+  "main": "script.js",
+  "scripts": {
+    "dev": "json-server --watch characters_db.json ./public"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}

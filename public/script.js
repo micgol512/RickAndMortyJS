@@ -70,7 +70,7 @@ async function addCharacter() {
   const addImage = document.getElementById("add-image");
   const addStatus = document.querySelector("#add-form-wrapper input:checked");
   const addSpecies = document.getElementById("add-species");
-  const defaultImage = `https://rickandmortyapi.com/api/character/avatar/19.jpeg`; // 3.jpeg w zadaniu było ale te wg mnie lepiej oddaje nieznaną postać
+  const defaultImage = `https://rickandmortyapi.com/api/character/avatar/19.jpeg`; // in description has been "3.jpeg" but this is better for me :)
   const body = {
     name: addName.value,
     image: addImage.value ? addImage.value : defaultImage,
@@ -80,7 +80,7 @@ async function addCharacter() {
       .toLowerCase()}`,
   };
   try {
-    const req = await fetch(`${BASE_URL}`, {
+    await fetch(`${BASE_URL}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
